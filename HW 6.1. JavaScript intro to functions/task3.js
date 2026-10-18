@@ -7,11 +7,11 @@ function checkOrder (available, ordered) {
         case ordered > available:
             result = "Your order is too large, we don’t have enough goods.";
             break;
-        case ordered < available:
+        case ordered <= available:
             result = "Your order is accepted.";
             break;
     }
     return result;
 }
 
-console.log(checkOrder(8,8));
+console.log(checkOrder(9,0));
