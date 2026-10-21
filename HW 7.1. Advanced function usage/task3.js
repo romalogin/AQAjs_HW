@@ -12,8 +12,33 @@ function divide (numerator, denominator) {
 }
 
 try {
-    const result = divide(0,5);
+    const result = divide(10,5);
     console.log(result);
 } catch (error) {
     console.error("Error:", error.message);
+}
+
+try {
+    const result = divide(10,"5");
+    console.log(result);
+} catch (error) {
+    console.error("Error:", error.message);
+}
+
+try {
+    const result = divide("10",5);
+    console.log(result);
+} catch (error) {
+    console.error("Error:", error.message);
+}
+
+try {
+    const result = divide(10,0);
+    console.log(result);
+} catch (error) {
+    console.error("Error:", error.message);
+}
+
+finally {
+    console.log ("Work is done");
 }
